@@ -22,7 +22,7 @@ if "%option%" == "2" (
     
     set DEBUG_VAR=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8787
     
-    set command=docker run --rm -p 8080:8080 -p 8787:8787 --env _JAVA_OPTIONS=%DEBUG_VAR% --name java-remote-debugging-test java-remote-debugging-test
+    set command=docker run --rm -p 8080:8080 -p 8787:8787 --env JAVA_TOOL_OPTIONS=%DEBUG_VAR% --name java-remote-debugging-test java-remote-debugging-test
     
     echo "%command%"
     
